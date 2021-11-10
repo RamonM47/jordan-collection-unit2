@@ -18,7 +18,7 @@
             <a href="/jordans/<%= jordan.id %>"><%= jordan.name %></a>
                 -
             <%= jordan.worn ? 'okay, i see you!! :flex, eyes:' : 'Hope they look good :eyes:' %>
-            <form action="/jordans/<%= jordan._id %>? method=Delete" method="POST">
+            <form action="/jordans/<%= jordan._id %>?_method=Delete" method="POST">
                 <button type="submit">Delete</button>
             </form>
         </h2>
