@@ -4,7 +4,9 @@ const Schema = mongoose.Schema
 const jordanSchema = new Schema ({
     name: String,
     worn: Boolean,
-    creased: Boolean
+    creased: Boolean,
+    picture: String
+    
 })
 
 const Jordan = mongoose.model('Jordan', jordanSchema)

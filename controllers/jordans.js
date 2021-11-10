@@ -39,10 +39,26 @@ function deleteJordan(req,res) {
     })
 }
 
+function edit (req,res) {
+    Jordan.findById(req.params.id)
+    .then(jordan => {
+        res.render('jordans/edit')
+    })
+}
+
+function update(req,res) {
+    req.body.worn = !!req.body.worn
+    Jordan.findByIdAndUpdate(req.params.id, req.body)
+    .then(jordan => {
+        res. redirect(`/jordans/${jordan._id}`)
+    })
+}
+
 export {
     index,
     create,
     newJordan as new,
     show,
-    deleteJordan as delete
+    deleteJordan as delete,
+    edit
 }
