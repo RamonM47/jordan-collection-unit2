@@ -2,7 +2,7 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>Hello, <%= user ? user.profile.name : "stranger" %></h1>
+  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img 
@@ -11,8 +11,6 @@
       >
     </div>
   <% } %>
-  <a href="/jordans">My jordans</h2>
-  <a href="/jordans/new">Store page</h2>
 </main>
 
 <%- include('./partials/footer') %>
