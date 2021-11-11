@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/collection.css" />
 </head>
 
 <body>
@@ -14,7 +15,7 @@
     <a href="jordans/new">add a pair</a>
     <% jordans.forEach(jordan => { %>
         <h2>
-            <img src="'<%= jordan.picture %>'">
+            <img src="<%= jordan.picture%>" alt='shoe pic'/>
             <a href="/jordans/<%= jordan.id %>"><%= jordan.name %></a>
                 -
             <%= jordan.worn ? 'okay, i see you!! :flex, eyes:' : 'Hope they look good :eyes:' %>

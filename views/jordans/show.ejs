@@ -6,17 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/specs.css" />
 </head>
 
 <body>
     <h1>Jordan specs</h1>
     <h2>
+        <img src="<%= jordan.picture%>" alt='shoe pic'/>
         name of J's: <%= jordan.name %>
             -
             <%= jordan.worn ? 'okay, i see you!! :flex, eyes:' : 'Hope they look good :eyes:' %>
     </h2>
-    <a href="/jordans/<%= jordan._id%>/edit"> Edit Details </a>
-    <a href="/jordans">Back</a>
+    <a href="/jordans/<%= jordan._id%>/edit" class="1"> Edit Details </a>
+    <a href="/jordans" class="2">Back</a>
 </body>
 
 </html>
