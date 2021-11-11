@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Add a pair!!</h1>
-    <form action="/jordans/<%= jordan._id %>" method='POST'>
-        <input type="text" name='name'>
-        <input type="checkbox" name="worn">
-        <input type="checkbox" name="creased">
-        <button type="submit">Add that pair</button>
+    <h1>Edit your pair!!</h1>
+    <form action="/jordans/<%= jordan._id %>?_method=PUT" method='POST'>
+        <input type="text" value="<%= jordan.picture %>" name="picure">
+        <input type="text" value="<%= jordan.name %>"name='name'>
+        <input type="checkbox" name="worn" <%= jordan.worn ? 'checked' : '' %> >
+        <button type="submit">Save changes</button>
     </form>
 </body>
 </html>

@@ -60,5 +60,6 @@ export {
     newJordan as new,
     show,
     deleteJordan as delete,
-    edit
+    edit,
+    update
 }

@@ -10,14 +10,16 @@
 
 <body>
     <h1>J's Collection</h1>
-    <a href="/">home</a>
+    <a href="/">Sign out</a>
     <a href="jordans/new">add a pair</a>
     <% jordans.forEach(jordan => { %>
         <h2>
-            
+            <img src="'<%= jordan.picture %>'">
             <a href="/jordans/<%= jordan.id %>"><%= jordan.name %></a>
                 -
             <%= jordan.worn ? 'okay, i see you!! :flex, eyes:' : 'Hope they look good :eyes:' %>
+                -
+            
             <form action="/jordans/<%= jordan._id %>?_method=Delete" method="POST">
                 <button type="submit">Delete</button>
             </form>
