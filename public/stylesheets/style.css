@@ -18,15 +18,14 @@ html {
 }
 
 body {
-  background-color: gray;
-  /* Use a system font, if none are available use an available sans-sarif font */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-image:url(https://media.gq.com/photos/5c5db3311407441537b1aa66/4:3/w_1776,h_1332,c_limit/Footlocker-Sneaker-Resale-GQ-02082019_3x2.jpg);
   margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 nav {
-  background-color: white;
+  background-color: orange;
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
@@ -41,4 +40,11 @@ main {
 
 h1 {
   font-size: 3.6rem;
+  background-color: orangered;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+img {
+  border-radius: 15px;
 }

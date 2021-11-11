@@ -20,12 +20,16 @@
                 -
             <%= jordan.worn ? 'okay, i see you!! :flex, eyes:' : 'Hope they look good :eyes:' %>
                 -
-            
+            <%= jordan.condition %> 
             <form action="/jordans/<%= jordan._id %>?_method=Delete" method="POST">
                 <button type="submit">Delete</button>
             </form>
         </h2>
         <% }) %>
+        <% if (jordans.length) { %>
+            <% } else { %>
+                <h2>Hit the footlocker!</h2>
+                <% } %>
 </body>
 
 </html>

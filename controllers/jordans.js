@@ -42,7 +42,9 @@ function deleteJordan(req,res) {
 function edit (req,res) {
     Jordan.findById(req.params.id)
     .then(jordan => {
-        res.render('jordans/edit')
+        res.render('jordans/edit', {
+            jordan
+        })
     })
 }
 
