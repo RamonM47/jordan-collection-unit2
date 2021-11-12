@@ -12,38 +12,31 @@
 <body>
     <h1>J's Collection</h1>
     <a href="/" class="leave">Home</a>
-    
-        <% if (user.profile.equals(profile._id)) { %>
-                <% jordans.forEach(jordan=> { %>
-                    <h2>
-                        <img src="<%= jordan.picture%>" alt='shoe pic' />
+    <% jordans.forEach(jordan=> { %>
+        <% console.log(user) %> 
+        <%if (user.profile.equals(userProfile._id)) {  %>
+            <p>test</p>
+        <% } else { %>
+            <h2>
+                <img src="<%= jordan.picture%>" alt='shoe pic' />
+                <a href="/jordans/<%= jordan.id %>">
+                    Edit My <%= jordan.name %> listing
+                </a>
+                <p>
+                    <%= jordan.worn ? 'Worn 👀' : 'Not worn? Okay, i see you!! 💪 🥶' %>
+                    <br>
+                        <%= jordan.condition %>
+                        <br>
+                        <%= jordan.comments %>  
+                    </p>    
                         
-                        <p>
-                            <%= jordan.worn ? 'Worn 👀' : 'Not worn? Okay, i see you!! 💪 🥶' %>
-                            <br>
-                            <%= jordan.condition %>
-                            <br>
-                            <%= jordan.comments %>  
-                        </p> 
-                        <a href="/jordans/<%= jordan.id %>">
-                            Edit My <%= jordan.name %> listing
-                        </a>   
-                        <form action="/jordans/<%= jordan._id %>?_method=Delete" method="POST">
-                            <button type="submit">Delete</button>
-                        </form>
-                    </h2>
-                <% }) %>
-        <% } else {%>
-            <p>
-            <% jordans.forEach(jordan=> { %>    
-                <%= jordan.worn ? 'Worn 👀' : 'Not worn? Okay, i see you!! 💪 🥶' %>
-                <br>
-                <%= jordan.condition %>
-                <br>
-                <%= jordan.comments %>  
-            <% }) %>  
-        <% } %> 
-    
+                    <form action="/jordans/<%= jordan._id %>?_method=Delete" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+            </h2>
+        <% } %>  
+        
+    <% }) %>
         <br>
         
             <% if (jordans.length) { %>

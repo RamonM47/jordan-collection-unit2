@@ -22,6 +22,8 @@ import('./config/passport.js')
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as jordansRouter } from './routes/jordans.js'
+import { profile } from 'console'
+import { passUserToView } from './middleware/middleware.js'
 
 // view engine setup
 app.set(
@@ -53,6 +55,9 @@ app.use(
     }
   })
 )
+
+// costum middleware
+app.use(passUserToView)
 
 // passport middleware
 app.use(passport.initialize())

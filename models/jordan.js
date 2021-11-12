@@ -7,8 +7,8 @@ const jordanSchema = new Schema ({
     worn: Boolean,
     picture: String,
     condition: String,
-    content:String,
-    author: {type: Schema.Types.ObjectId, ref: "Profile"}
+    comments:String,
+    profile: {type: Schema.Types.ObjectId, ref: "Profile"}
     
 })
 
