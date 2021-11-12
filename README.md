@@ -12,7 +12,7 @@ This app allows you to post your jordans and allow users to see your posting. Id
 ![](https://trello.com/1/cards/6185545d04fd6f1a40bd6fa3/attachments/6185545d04fd6f1a40bd6fb0/previews/6185545f04fd6f1a40bd700c/download/ERD.png)
 
 # Final
-![](https://i.ibb.co/vH5vPpF/project.png)
+![](https://i.ibb.co/t4fPsgG/project.png)
 
 ## Technology Used:
 - JavaScript
