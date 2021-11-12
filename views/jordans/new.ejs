@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/new.css" />
     <title>Document</title>
 </head>
 <body>
-    <h1>Add a pair!!</h1>
-    <form action="/jordans" method='POST'>
-        <input type="url" name="picture" placeholder="add img url">
-        <input type="text" name='name' placeholder="Name of J's">
-        <input type="checkbox" name="worn">
-        <button type="submit">Add that pair</button>
+    
+        <h1>
+            <p> Add a pair!!</p>
+        </h1>
+            <div>
+                <form action="/jordans" method='POST'>
+                <h3>Pic of your shoes</h3>
+                <input type="url" class="a" name="picture" placeholder="add img url">
+            <br>
+                <h3>Colorway and number</h3>
+                <input type="text" class="b" name='name' placeholder="Name of J's">
+            <br>
+                <h3>Worn?</h3>
+                <input type="checkbox" class="c" name="worn">
+            <br>
+                <button type="submit">Add that pair</button>
+            </div>
         <br>
-        <a href="/jordans">Back</a>
-    </form>
+            <p class="g"> <a href="/jordans" class="x">Back</a> </p>
+        </form>
+    
 </body>
 </html>

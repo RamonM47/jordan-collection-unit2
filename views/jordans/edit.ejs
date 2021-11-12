@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/edit.css" />
     <title>Document</title>
 </head>
 <body>
-    <h1>Add some details</h1>
-    <form action="/jordans/<%= jordan._id %>?_method=PUT" method='POST'>
-        <input type="text" value="<%= jordan.condition %>" name='condition' placeholder="whats the damage?">
-        <input type="text" value="<%= jordan.comments %>" name='comments' placeholder="How do you value them?">
-        <button type="submit">Add comments</button>
-    </form>
-        <a href="/jordans">back</a>
+    <h1>
+        <p>Add some details</p> 
+    </h1>
+    <div>
+        <form action="/jordans/<%= jordan._id %>?_method=PUT" method='POST'>
+            <h3>List the condition</h3>
+            <input type="text" class='a' value="<%= jordan.condition %>" class="b" name='condition' placeholder="brand new or busted?">
+        <br>
+            <h3>Details and comments</h3>
+            <input type="text" class='b' value="<%= jordan.comments %>" class= 'a'name='comments' placeholder="How do you value them?">
+        <br>
+            <button type="submit">Add comments</button>
+        </form>
+    </div>
+    <br>
+        <p class="g"><a href="/jordans" class= 'x'>Back</a></p>
 </body>
 </html>
