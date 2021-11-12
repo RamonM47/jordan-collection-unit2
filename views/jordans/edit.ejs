@@ -10,6 +10,9 @@
     <h1>Add some details</h1>
     <form action="/jordans/<%= jordan._id %>?_method=PUT" method='POST'>
         <input type="text" value="<%= jordan.condition %>" name='condition' placeholder="whats the damage?">
+        <input type="text" value="<%= jordan.comments %>" name='comments' placeholder="How do you value them?">
+        <button type="submit">Add comments</button>
     </form>
+        <a href="/jordans">back</a>
 </body>
 </html>

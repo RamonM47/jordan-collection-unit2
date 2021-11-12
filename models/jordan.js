@@ -6,7 +6,8 @@ const jordanSchema = new Schema ({
     name: String,
     worn: Boolean,
     picture: String,
-    condition: String
+    condition: String,
+    comments:String
 })
 
 const Jordan = mongoose.model('Jordan', jordanSchema)

@@ -1,5 +1,5 @@
 html {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 /* The Universal Selector */
@@ -18,14 +18,23 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
   background-image:url(https://media.gq.com/photos/5c5db3311407441537b1aa66/4:3/w_1776,h_1332,c_limit/Footlocker-Sneaker-Resale-GQ-02082019_3x2.jpg);
   margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: auto;
+  text-align: center;
+  justify-content: end;
 }
 
 nav {
-  background-color: orange;
+  background-color: silver;
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
@@ -47,4 +56,34 @@ h1 {
 
 img {
   border-radius: 15px;
+  width: 100%;
+  display: block;
+  margin: auto;
 }
+
+a.collection {
+  font-size: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: silver;
+  width: fit-content;
+  height: fit-content;
+  color: black;
+  position:initial;
+  
+
+}
+
+h2{
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  background-color: silver;
+  border-radius: 10px;
+  filter: opacity(50%);
+  /* filter: blur(20px); */
+}
+

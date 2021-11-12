@@ -11,25 +11,37 @@
 
 <body>
     <h1>J's Collection</h1>
-    <a href="/">Sign out</a>
-    <a href="jordans/new">add a pair</a>
-    <% jordans.forEach(jordan => { %>
+    <a href="/" class="leave">Sign out</a>
+    
+    <% jordans.forEach(jordan=> { %>
         <h2>
-            <img src="<%= jordan.picture%>" alt='shoe pic'/>
-            <a href="/jordans/<%= jordan.id %>"><%= jordan.name %></a>
-                -
-            <%= jordan.worn ? 'okay, i see you!! :flex, eyes:' : 'Hope they look good :eyes:' %>
-                -
-            <%= jordan.condition %> 
+            <img src="<%= jordan.picture%>" alt='shoe pic' />
+            <a href="/jordans/<%= jordan.id %>">
+            My <%= jordan.name %>
+            </a>
+            <p>
+                <%= jordan.worn ? 'Worn 👀' : 'Not worn? Okay, i see you!! 💪 🥶' %>
+                <br>
+                <%= jordan.condition %>
+                <br>
+                <%= jordan.price %>
+                <br>
+                <%= jordan.comments %>  
+            </p>    
+                
             <form action="/jordans/<%= jordan._id %>?_method=Delete" method="POST">
                 <button type="submit">Delete</button>
             </form>
         </h2>
+        <br>
         <% }) %>
-        <% if (jordans.length) { %>
-            <% } else { %>
-                <h2>Hit the footlocker!</h2>
-                <% } %>
+            <% if (jordans.length) { %>
+                <a href="jordans/new" class="add">add a pair</a>
+                <% } else { %>
+                    <div>
+                        <a href="/jordans/new" class="big">Hit the footlocker!</a> 
+                    </div>
+                    <% } %>
 </body>
 
 </html>

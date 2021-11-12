@@ -14,13 +14,19 @@
     <h2>
         <img src="<%= jordan.picture%>" alt='shoe pic'/>
         name of J's: <%= jordan.name %>
-            -
-            <%= jordan.worn ? 'okay, i see you!! :flex, eyes:' : 'Hope they look good :eyes:' %>
-            -
-            <%= jordan.condition %>
+        <p>
+            <%= jordan.worn ? 'Hope they look good 👀' : 'okay, i see you!! 💪 🥶' %>
+                <br>
+                <%= jordan.condition %>
+                <br>
+                <%= jordan.price %>
+                <br>
+                <%= jordan.comments %>
+        </p>
     </h2>
     <a href="/jordans/<%= jordan._id%>/edit" class="1"> Edit Details </a>
-    <a href="/jordans" class="2">Back</a>
+    <br>
+    <a href="/jordans" class="2">Done</a>
 </body>
 
 </html>
