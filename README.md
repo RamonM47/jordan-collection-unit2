@@ -27,6 +27,9 @@ This app allows you to post your jordans and allow users to see your posting. Id
 - Heroku
 - Method-Override
 
+# Link
+https://jordans-collection.herokuapp.com/
+
 # Next steps
 - impliment a feature where users can contact eachoher through listings.
 - Having person profiles (myaspace like) where they can post what they would like
