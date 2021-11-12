@@ -34,3 +34,4 @@ https://jordans-collection.herokuapp.com/
 - impliment a feature where users can contact eachoher through listings.
 - Having person profiles (myaspace like) where they can post what they would like
 - Have full CRUD on image addition and deletion, as condition of the sneakers may change.
+- Include a logo
