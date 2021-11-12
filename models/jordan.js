@@ -7,7 +7,9 @@ const jordanSchema = new Schema ({
     worn: Boolean,
     picture: String,
     condition: String,
-    comments:String
+    content:String,
+    author: {type: Schema.Types.ObjectId, ref: "Profile"}
+    
 })
 
 const Jordan = mongoose.model('Jordan', jordanSchema)
