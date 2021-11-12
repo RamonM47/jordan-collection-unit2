@@ -21,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: justify;
+  background-color: silver;
   background-image:url(https://media.gq.com/photos/5c5db3311407441537b1aa66/4:3/w_1776,h_1332,c_limit/Footlocker-Sneaker-Resale-GQ-02082019_3x2.jpg);
   margin: 0;
   background-repeat: no-repeat;

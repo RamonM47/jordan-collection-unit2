@@ -44,12 +44,11 @@ div {
 }
 
 .add{
-    display: flex;
-    flex-direction: column-reverse;
     background-color: tomato;
     color: black;
     border-radius: 50px;
     padding: 2px;
+    text-align: center;
 }
 
 .leave {
