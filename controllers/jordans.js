@@ -13,17 +13,16 @@ function index(req, res) {
             res.render('jordans/index', {
                 jordans,
                 user: req.user,
-                userProfile: req.user
-
             })
         })
 }
 
 function create(req, res) {
     req.body.worn = !!req.body.worn
+    req.body.creator= req.user.profile._id
     Jordan.create(req.body)
-        .then(() => {
-            res.redirect('/jordans')
+        .then((jordan) => {
+            res.redirect('/jordans' )
         })
 }
 

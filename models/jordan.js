@@ -8,7 +8,7 @@ const jordanSchema = new Schema ({
     picture: String,
     condition: String,
     comments:String,
-    profile: {type: Schema.Types.ObjectId, ref: "Profile"}
+    creator: {type: Schema.Types.ObjectId, ref: "Profile"}
     
 })
 

@@ -14,13 +14,28 @@
     <a href="/" class="leave">Home</a>
     <% jordans.forEach(jordan=> { %>
         <% console.log(user) %> 
-        <%if (user.profile.equals(userProfile._id)) {  %>
-            <p>test</p>
+        <%if (user.profile._id.equals(jordan.creator)) {  %>
+           <h2>
+            <img src="<%= jordan.picture%>" alt='shoe pic' />
+            <a href="/jordans/<%= jordan.id %>">
+                Edit My <%= jordan.name %> listing
+            </a>
+            <p>
+                <%= jordan.worn ? 'Worn 👀' : 'Not worn? Okay, i see you!! 💪 🥶' %>
+                <br>
+                    <%= jordan.condition %>
+                    <br>
+                    <%= jordan.comments %>  
+                </p>    
+                    
+                <form action="/jordans/<%= jordan._id %>?_method=Delete" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+        </h2>
         <% } else { %>
             <h2>
                 <img src="<%= jordan.picture%>" alt='shoe pic' />
-                <a href="/jordans/<%= jordan.id %>">
-                    Edit My <%= jordan.name %> listing
+                 <a href="">   <%= jordan.name %> 
                 </a>
                 <p>
                     <%= jordan.worn ? 'Worn 👀' : 'Not worn? Okay, i see you!! 💪 🥶' %>
@@ -29,10 +44,6 @@
                         <br>
                         <%= jordan.comments %>  
                     </p>    
-                        
-                    <form action="/jordans/<%= jordan._id %>?_method=Delete" method="POST">
-                        <button type="submit">Delete</button>
-                    </form>
             </h2>
         <% } %>  
         
